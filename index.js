@@ -25,16 +25,18 @@ app.use('/api', router)
 router.get('/test', testRoute)
 
 // 1st ROUTE (wholesaler along with a list of retailersassociated)
-router.get('/:wholesaler_id', wholesalerIdRoutes);
+router.get('/wholesaler/:wholesaler_id', wholesalerIdRoutes);
 
 // 2nd ROUTE (Get a retailer who has single wholesaler)
-router.get('/turnover/yearly', turnoverMonthlyRoutes);
+router.get('/singleWholesaler', singleWholesalerRoutes);
 
 // 3rd ROUTE (Total monthly turnover of each wholesaler for a complete year)
-router.get('/turnover/max', turnoverMaxRoutes );
+router.get('/turnoverMonthly', turnoverMonthlyRoutes);
 
 // 4th ROUTE ( Max turnover of each wholesaler from a single retailer)
-router.get('/single-wholesaler', singleWholesalerRoutes);
+router.get('/turnoverMax', turnoverMaxRoutes );
+
+
 
 
 

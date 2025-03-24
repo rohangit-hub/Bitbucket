@@ -5,7 +5,7 @@ const retailerSchema = new mongoose.Schema({
   mobile_number: String,
   
   wholesalers: [{ 
-    type: mongoose.Schema.Types.ObjectId, 
+    type: mongoose.Schema.Types.ObjectId,
     ref: 'Wholesaler' }],
 
 },{timestamps:true});

@@ -1,0 +1,42 @@
+[{
+  "_id": "6601f1e0b7b3a45d1c0a1241",
+  "name": "Retail Mart",
+  "mobile_number": "9123456789",
+  "wholesalers": [
+    "6601f1c8b7b3a45d1c0a1231",
+    "6601f1c8b7b3a45d1c0a1232"
+  ]
+},
+{
+  "_id": "6601f1e0b7b3a45d1c0a1242",
+  "name": "City Grocers",
+  "mobile_number": "9234567890",
+  "wholesalers": [
+    "6601f1c8b7b3a45d1c0a1232"
+  ]
+},
+{
+  "_id": "6601f1e0b7b3a45d1c0a1243",
+  "name": "Super Mart",
+  "mobile_number": "9345678901",
+  "wholesalers": [
+    "6601f1c8b7b3a45d1c0a1233",
+    "6601f1c8b7b3a45d1c0a1234"
+  ]
+},
+{
+  "_id": "6601f1e0b7b3a45d1c0a1244",
+  "name": "Local Bazaar",
+  "mobile_number": "9456789012",
+  "wholesalers": [
+    "6601f1c8b7b3a45d1c0a1235"
+  ]
+},
+{
+  "_id": "6601f1e0b7b3a45d1c0a1245",
+  "name": "Quick Stop",
+  "mobile_number": "9567890123",
+  "wholesalers": [
+    "6601f1c8b7b3a45d1c0a1231"
+  ]
+}]

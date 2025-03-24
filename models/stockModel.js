@@ -11,6 +11,6 @@ const stockSchema = new mongoose.Schema({
     
   stock_amount: Number,
   date: Date,
-},{timestamps:true});
+});
 
 export const Stock = mongoose.model('Stock', stockSchema);

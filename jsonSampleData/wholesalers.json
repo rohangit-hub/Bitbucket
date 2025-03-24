@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1231"
+  },
+  "name": "ABC Traders",
+  "mobile_number": "9876543210"
+},
+{
+  "_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1232"
+  },
+  "name": "Global Suppliers",
+  "mobile_number": "9876543211"
+},
+{
+  "_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1233"
+  },
+  "name": "Mega Mart Wholesalers",
+  "mobile_number": "9876543212"
+},
+{
+  "_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1234"
+  },
+  "name": "Best Buy Distributors",
+  "mobile_number": "9876543213"
+},
+{
+  "_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1235"
+  },
+  "name": "Prime Wholesale Hub",
+  "mobile_number": "9876543214"
+}]

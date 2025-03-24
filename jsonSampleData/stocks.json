@@ -1,0 +1,75 @@
+[{
+  "_id": {
+    "$oid": "6601f210b7b3a45d1c0a1251"
+  },
+  "retailer_id": {
+    "$oid": "6601f1e0b7b3a45d1c0a1241"
+  },
+  "wholesaler_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1231"
+  },
+  "stock_amount": 5000,
+  "date": {
+    "$date": "2021-01-15T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6601f210b7b3a45d1c0a1252"
+  },
+  "retailer_id": {
+    "$oid": "6601f1e0b7b3a45d1c0a1242"
+  },
+  "wholesaler_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1232"
+  },
+  "stock_amount": 7000,
+  "date": {
+    "$date": "2021-03-10T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6601f210b7b3a45d1c0a1253"
+  },
+  "retailer_id": {
+    "$oid": "6601f1e0b7b3a45d1c0a1243"
+  },
+  "wholesaler_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1233"
+  },
+  "stock_amount": 12000,
+  "date": {
+    "$date": "2021-05-20T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6601f210b7b3a45d1c0a1254"
+  },
+  "retailer_id": {
+    "$oid": "6601f1e0b7b3a45d1c0a1244"
+  },
+  "wholesaler_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1235"
+  },
+  "stock_amount": 8000,
+  "date": {
+    "$date": "2021-07-25T00:00:00.000Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6601f210b7b3a45d1c0a1255"
+  },
+  "retailer_id": {
+    "$oid": "6601f1e0b7b3a45d1c0a1245"
+  },
+  "wholesaler_id": {
+    "$oid": "6601f1c8b7b3a45d1c0a1231"
+  },
+  "stock_amount": 15000,
+  "date": {
+    "$date": "2021-09-12T00:00:00.000Z"
+  }
+}]

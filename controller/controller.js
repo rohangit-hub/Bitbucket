@@ -12,14 +12,36 @@ const testRoute = (req, res) => {
 
 // 1st ROUTE (wholesaler along with a list of retailers associated)
 const wholesalerIdRoutes = async (req, res) => {
-    const { wholesaler_id } = +req.params;
-    const result = await Wholesaler.findOne({ "_id": wholesaler_id }).exec();
-    res.status(200).json(result);
+    try {
+        const wholesaler_id = req.params.wholesaler_id;
+        const result = await Wholesaler.findOne({ _id: wholesaler_id }).exec();
+        if (!result) {
+            return res.status(404).json({ message: "No wholesaler found " });
+        }
+        res.status(200).json(result);
+    } catch (error) {
+        console.error("Error fetching single wholesaler retailers:", error);
+        res.status(500).json({ message: "Internal server error." });
+    }
+}
+
+// 2nd ROUTE (Get a retailer who has single wholesaler)
+const singleWholesalerRoutes = async (req, res) => {
+    try {
+        // Find retailers having exactly 1 wholesaler
+        const retailers = await Retailer.find({ wholesalers: { $size: 1 } }).exec()
+        if (!retailers || retailers.length === 0) {
+            res.status(404).send({ "message": "No Retailer Found" })
+        }
+        res.status(200).send(retailers)
+    } catch (error) {
+        console.error('Error fetching retailers with a single wholesaler:', error);
+        res.status(500).send({ "message": "Internal Server Error" })
+    }
 }
 
 
-
-// 2nd ROUTE (Get a retailer who has single wholesaler)
+// 3rd ROUTE (Total monthly turnover of each wholesaler for a complete year)
 const turnoverMonthlyRoutes = async (req, res) => {
     const result = await Stock.aggregate([
         {
@@ -53,9 +75,9 @@ const turnoverMonthlyRoutes = async (req, res) => {
 
 
 
-// 3rd ROUTE (Total monthly turnover of each wholesaler for a complete year)
+// 4th ROUTE ( Max turnover of each wholesaler from a single retailer)
 const turnoverMaxRoutes = async (req, res) => {
-    const result = await await Stock.aggregate([
+    const result = await Stock.aggregate([
         {
             $group: {
                 _id: {
@@ -82,11 +104,7 @@ const turnoverMaxRoutes = async (req, res) => {
 
 
 
-// 4th ROUTE ( Max turnover of each wholesaler from a single retailer)
-const singleWholesalerRoutes = async (req, res) => {
-    const result = await Retailer.find({ wholesalers: { $size: 1 } }).populate('wholesalers')
-    res.status(200).json(result);
-}
+
 
 
 export {
@@ -94,6 +112,5 @@ export {
     wholesalerIdRoutes,
     turnoverMonthlyRoutes,
     turnoverMaxRoutes,
-    singleWholesalerRoutes,
-
+    singleWholesalerRoutes
 }
